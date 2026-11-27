@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Kitsunes Battle : consultez, ajoutez et faites combattre des Kitsune." />
     <meta name="theme-color" content="#191634" />
-    <title>Kitsunes Battle</title>
+    <title>Liste des Kitsune | Kitsunes Battle</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,9 +13,23 @@
   </head>
   <body>
     <main class="page">
-      <h1 class="page-title">Kitsunes Battle</h1>
+      <h1 class="page-title">Les Kitsune</h1>
+
+      <!-- Rempli en JS à partir du <template> ci-dessous -->
+      <ul id="kitsune-list" class="kitsune-list"></ul>
     </main>
 
-    <script type="module" src="/src/main.js"></script>
+    <!-- Modèle d'une carte : cloné en JS pour chaque Kitsune -->
+    <template id="kitsune-card-template">
+      <li class="kitsune-card">
+        <a class="kitsune-card-link">
+          <h2 class="kitsune-card-name"></h2>
+          <p class="kitsune-card-status"></p>
+          <p class="kitsune-card-badge" hidden>Boosté</p>
+        </a>
+      </li>
+    </template>
+
+    <script type="module" src="/src/scripts/liste.js"></script>
   </body>
 </html>

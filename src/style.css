@@ -2,6 +2,7 @@
 
 /* Découpes des styles */
 @import "./styles/common.css";
+@import "./styles/liste.css";
 @import "./styles/details.css";
 
 /* Variables de thème */

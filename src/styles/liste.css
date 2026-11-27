@@ -1,0 +1,42 @@
+/* Écran 'Liste Kitsune' */
+
+.kitsune-list {
+  @apply mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+/* ----- Carte ----- */
+.kitsune-card {
+  @apply rounded-2xl border-2 border-transparent bg-pf-deep-blue1 transition-all duration-300 ease-in-out;
+  @apply hover:-translate-y-1 hover:border-pf-green;
+}
+
+.kitsune-card-link {
+  @apply flex h-full flex-col items-center gap-2 p-6;
+}
+
+.kitsune-card-name {
+  @apply font-heading text-2xl font-semibold text-pf-white;
+}
+
+/* ----- Statut (enRepos) ----- */
+.kitsune-card-status {
+  @apply rounded-full px-3 py-1 text-sm font-semibold;
+}
+
+.kitsune-card-status.is-available {
+  @apply bg-pf-green/15 text-pf-green;
+}
+
+.kitsune-card-status.is-resting {
+  @apply bg-white/10 text-[#aaaaaa];
+}
+
+/* ----- Kitsune boosté ----- */
+.kitsune-card.is-boosted {
+  @apply border-pf-yellow;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-pf-yellow) 40%, transparent);
+}
+
+.kitsune-card-badge {
+  @apply font-heading text-sm font-semibold text-pf-yellow;
+}
