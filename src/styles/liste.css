@@ -6,8 +6,8 @@
 
 /* ----- Carte ----- */
 .kitsune-card {
-  @apply rounded-2xl border-2 border-transparent bg-pf-deep-blue1 transition-all duration-300 ease-in-out;
-  @apply hover:-translate-y-1 hover:border-pf-green;
+  @apply rounded-2xl border-2 border-transparent bg-pj-dusk1 transition-all duration-300 ease-in-out;
+  @apply hover:-translate-y-1 hover:border-pj-orange;
 }
 
 .kitsune-card-link {
@@ -15,7 +15,7 @@
 }
 
 .kitsune-card-name {
-  @apply font-heading text-2xl font-semibold text-pf-white;
+  @apply font-heading text-2xl font-semibold text-pj-white;
 }
 
 /* ----- Statut (enRepos) ----- */
@@ -24,7 +24,7 @@
 }
 
 .kitsune-card-status.is-available {
-  @apply bg-pf-green/15 text-pf-green;
+  @apply bg-pj-orange/15 text-pj-orange;
 }
 
 .kitsune-card-status.is-resting {
@@ -33,9 +33,9 @@
 
 /* ----- Kitsune boosté ----- */
 .kitsune-card.is-boosted {
-  @apply border-pf-yellow;
+  @apply border-pj-gold;
 }
 
 .kitsune-card-badge {
-  @apply font-heading text-sm font-semibold text-pf-yellow;
+  @apply font-heading text-sm font-semibold text-pj-gold;
 }

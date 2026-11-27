@@ -3,7 +3,7 @@
 /* Les styles des champs sont dans common.css : car aussi utilisés par l'écran Bataille */
 
 .kitsune-form {
-  @apply mx-auto mt-10 flex max-w-2xl flex-col gap-6 rounded-2xl bg-pf-deep-blue1 p-6 text-left sm:p-10;
+  @apply mx-auto mt-10 flex max-w-2xl flex-col gap-6 rounded-2xl bg-pj-dusk1 p-6 text-left sm:p-10;
 }
 
 /* ----- Groupes de champs (fieldset / legend) ----- */
@@ -12,7 +12,7 @@
 }
 
 .form-legend {
-  @apply mb-2 font-heading text-xl font-semibold text-pf-white;
+  @apply mb-2 font-heading text-xl font-semibold text-pj-white;
 }
 
 .form-stats {

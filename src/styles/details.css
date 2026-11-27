@@ -6,8 +6,8 @@
 }
 
 .back-link {
-  @apply inline-flex items-center gap-2 rounded-lg border-2 border-pf-deep-blue2 px-4 py-2 font-heading font-semibold;
-  @apply transition-colors duration-300 ease-in-out hover:border-pf-green hover:text-pf-green;
+  @apply inline-flex items-center gap-2 rounded-lg border-2 border-pj-dusk2 px-4 py-2 font-heading font-semibold;
+  @apply transition-colors duration-300 ease-in-out hover:border-pj-orange hover:text-pj-orange;
 }
 
 .back-link-arrow {
@@ -19,7 +19,7 @@
 }
 
 .kitsune-details {
-  @apply mx-auto flex max-w-2xl flex-col gap-8 rounded-2xl bg-pf-deep-blue1 p-6 text-left sm:p-10;
+  @apply mx-auto flex max-w-2xl flex-col gap-8 rounded-2xl bg-pj-dusk1 p-6 text-left sm:p-10;
 }
 
 .kitsune-details-header {
@@ -36,7 +36,7 @@
 }
 
 .stat {
-  @apply rounded-xl bg-pf-deep-blue2 p-4 text-center;
+  @apply rounded-xl bg-pj-dusk2 p-4 text-center;
 }
 
 .stat-label {
@@ -44,7 +44,7 @@
 }
 
 .stat-value {
-  @apply font-heading text-2xl font-bold text-pf-white;
+  @apply font-heading text-2xl font-bold text-pj-white;
 }
 
 /* ----- Chrono de repos ----- */

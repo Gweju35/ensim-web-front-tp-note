@@ -1,7 +1,7 @@
 /* Barre de navigation, partagée par toutes les pages */
 
 .site-header {
-  @apply sticky top-0 z-50 border-b border-pf-deep-blue2 bg-pf-darkblue/90 backdrop-blur;
+  @apply sticky top-0 z-50 border-b border-pj-dusk2 bg-pj-night/90 backdrop-blur;
 }
 
 .navbar {
@@ -9,7 +9,7 @@
 }
 
 .navbar-logo {
-  @apply font-display text-lg text-pf-green sm:text-xl;
+  @apply font-display text-lg text-pj-orange sm:text-xl;
 }
 
 .navbar-links {
@@ -18,15 +18,15 @@
 
 .navbar-link {
   @apply rounded-lg px-3 py-1 font-heading font-semibold transition-colors duration-300 ease-in-out;
-  @apply hover:bg-pf-deep-blue2 hover:text-pf-white;
+  @apply hover:bg-pj-dusk2 hover:text-pj-white;
 }
 
 /* Lien de la page courante */
 .navbar-link[aria-current="page"] {
-  @apply bg-pf-green text-pf-darkblue hover:bg-pf-green hover:text-pf-darkblue;
+  @apply bg-pj-orange text-pj-night hover:bg-pj-orange hover:text-pj-night;
 }
 
 /* Section courante, sur une sous-page (ex : "Liste" quand on est sur les détails d'un Kitsune) */
 .navbar-link[aria-current="true"] {
-  @apply text-pf-green ring-2 ring-inset ring-pf-green hover:bg-pf-green/15 hover:text-pf-green;
+  @apply text-pj-orange ring-2 ring-inset ring-pj-orange hover:bg-pj-orange/15 hover:text-pj-orange;
 }

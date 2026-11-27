@@ -5,7 +5,7 @@
 }
 
 .battle-form {
-  @apply mx-auto mt-10 flex max-w-3xl flex-col items-center gap-6 rounded-2xl bg-pf-deep-blue1 p-6 text-left sm:p-10;
+  @apply mx-auto mt-10 flex max-w-3xl flex-col items-center gap-6 rounded-2xl bg-pj-dusk1 p-6 text-left sm:p-10;
 }
 
 /* Les 2 listes déroulantes */
@@ -14,7 +14,7 @@
 }
 
 .battle-versus {
-  @apply text-center font-display text-3xl text-pf-yellow sm:pb-1;
+  @apply text-center font-display text-3xl text-pj-gold sm:pb-1;
 }
 
 .button-large {
@@ -27,7 +27,7 @@
 
 /* ----- Résultat ----- */
 .battle-result {
-  @apply mx-auto mt-6 flex max-w-3xl flex-col gap-3 rounded-2xl border-2 border-pf-yellow bg-pf-deep-blue1 p-6;
+  @apply mx-auto mt-6 flex max-w-3xl flex-col gap-3 rounded-2xl border-2 border-pj-gold bg-pj-dusk1 p-6;
 }
 
 .battle-log {
@@ -35,7 +35,7 @@
 }
 
 .battle-log-summary {
-  @apply cursor-pointer text-center font-heading font-semibold text-pf-green;
+  @apply cursor-pointer text-center font-heading font-semibold text-pj-orange;
 }
 
 .battle-log-list {

@@ -1,7 +1,7 @@
 /* Styles partagés par toutes les pages (titres, boutons, liens, messages) */
 
 .section-title {
-  @apply font-heading text-xl font-semibold text-pf-white;
+  @apply font-heading text-xl font-semibold text-pj-white;
 }
 
 /* ----- Boutons ----- */
@@ -11,11 +11,11 @@
 }
 
 .button-primary {
-  @apply bg-pf-green text-pf-darkblue hover:bg-pf-yellow disabled:hover:bg-pf-green;
+  @apply bg-pj-orange text-pj-night hover:bg-pj-gold disabled:hover:bg-pj-orange;
 }
 
 .button-secondary {
-  @apply border-2 border-pf-deep-blue2 bg-transparent text-pf-white hover:border-pf-green;
+  @apply border-2 border-pj-dusk2 bg-transparent text-pj-white hover:border-pj-orange;
 }
 
 /* ----- Champs de formulaire (écrans Ajout et Bataille) ----- */
@@ -28,8 +28,8 @@
 }
 
 .form-input {
-  @apply w-full rounded-lg border-2 border-pf-deep-blue2 bg-pf-darkblue px-3 py-2 text-pf-white;
-  @apply placeholder:text-[#777777] focus:border-pf-green focus:outline-none disabled:opacity-40;
+  @apply w-full rounded-lg border-2 border-pj-dusk2 bg-pj-night px-3 py-2 text-pj-white;
+  @apply placeholder:text-[#777777] focus:border-pj-orange focus:outline-none disabled:opacity-40;
 }
 
 /* ----- Champ refusé ----- */
@@ -43,10 +43,10 @@
 
 /* ----- Liens ----- */
 .link {
-  @apply text-pf-green underline-offset-4 hover:underline;
+  @apply text-pj-orange underline-offset-4 hover:underline;
 }
 
 /* ----- Message d'état ----- */
 .status-message {
-  @apply min-h-6 font-heading text-pf-yellow;
+  @apply min-h-6 font-heading text-pj-gold;
 }
