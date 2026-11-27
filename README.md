@@ -28,6 +28,13 @@ Stack : HTML, JavaScript, [Tailwind CSS v4](https://tailwindcss.com/), servi ave
 - Les pages HTML sont à la racine du projet.
 - Les scripts propres à chaque écran sont dans `src/scripts/` (un fichier par page), séparés des données (`src/data/`), de l'accès aux données (`src/services/`) et des styles (`src/styles/`).
 
+## Bonus
+
+### Podium sur l'écran Liste
+
+- Affiche les 3 meilleurs Kitsune, classés par défaut sur les **victoires**. Une liste déroulante permet de changer de critère : le plus résistant (PV), le plus fort (force) ou le plus rapide (vitesse).
+- Tri avec `toSorted()` : on obtient une copie triée sans modifier la liste d'origine, qui sert à afficher les cartes.
+
 ## Difficultés rencontrées / questions
 
 - **Flash de page non stylée en développement** : le CSS était importé depuis le JS. En mode `npm run dev`, Vite l'injecte alors via JavaScript, après l'affichage du HTML → la page apparaissait une fraction de seconde sans style. Solution : charger la feuille de style dans le `<head>`.
@@ -65,12 +72,15 @@ npm install
 │   │   ├── details.js      # Script de l'écran Détails
 │   │   ├── ajout.js        # Script de l'écran Ajout
 │   │   └── bataille.js     # Script de l'écran Bataille
+│   ├── components/
+│   │   └── podium.js       # Bonus : podium de l'écran Liste
 │   ├── utils/
 │   │   └── duree.js        # Formatage du temps restant (chrono de repos)
 │   ├── styles/
 │   │   ├── common.css      # Boutons, liens, titres partagés
 │   │   ├── navbar.css      # Barre de navigation
 │   │   ├── liste.css       # Styles de l'écran Liste
+│   │   ├── podium.css      # Bonus : styles du podium
 │   │   ├── details.css     # Styles de l'écran Détails
 │   │   ├── ajout.css       # Styles du formulaire d'ajout
 │   │   ├── introuvable.css # Styles de l'écran Kitsune introuvable

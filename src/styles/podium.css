@@ -1,0 +1,66 @@
+/* Bonus : podium des 3 meilleurs Kitsune */
+
+.podium {
+  @apply mx-auto mt-10 max-w-3xl rounded-2xl bg-pj-dusk1 p-6 sm:p-8;
+}
+
+.podium-header {
+  @apply flex flex-col items-center justify-between gap-4 sm:flex-row;
+}
+
+.podium-filter {
+  @apply flex items-center gap-3;
+}
+
+.podium-select {
+  @apply w-auto;
+}
+
+/* ----- Marches ----- */
+.podium-list {
+  @apply mt-8 grid grid-cols-3 items-end gap-2 sm:gap-4;
+}
+
+.podium-place {
+  @apply flex min-w-0 flex-col items-center gap-1;
+}
+
+.podium-name {
+  @apply max-w-full truncate font-heading font-semibold text-pj-white hover:text-pj-orange;
+}
+
+.podium-value {
+  @apply text-sm text-pj-gold tabular-nums;
+}
+
+.podium-step {
+  @apply mt-2 flex w-full justify-center rounded-t-xl bg-pj-dusk2 pt-3 text-3xl;
+}
+
+.podium-place:nth-child(1) {
+  @apply order-2;
+}
+
+.podium-place:nth-child(1) .podium-step {
+  @apply h-32 border-t-4 border-pj-gold;
+}
+
+.podium-place:nth-child(2) {
+  @apply order-1;
+}
+
+.podium-place:nth-child(2) .podium-step {
+  @apply h-24;
+}
+
+.podium-place:nth-child(3) {
+  @apply order-3;
+}
+
+.podium-place:nth-child(3) .podium-step {
+  @apply h-16;
+}
+
+.list-title {
+  @apply mt-14;
+}

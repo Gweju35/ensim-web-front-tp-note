@@ -27,15 +27,45 @@
     <main class="page">
       <h1 class="page-title">Les Kitsune</h1>
 
+      <!-- Bonus : podium des 3 meilleurs Kitsune selon critère -->
+      <section class="podium" aria-labelledby="podium-titre">
+        <div class="podium-header">
+          <h2 id="podium-titre" class="section-title"><span aria-hidden="true">🏆</span> Podium</h2>
+
+          <div class="podium-filter">
+            <label class="form-label" for="podium-critere">Classer par</label>
+            <select class="form-input podium-select" id="podium-critere" name="critere">
+              <option value="victoires" selected>Le plus de victoires</option>
+              <option value="pv">Le plus résistant (PV)</option>
+              <option value="force">Le plus fort (force)</option>
+              <option value="vitesse">Le plus rapide (vitesse)</option>
+            </select>
+          </div>
+        </div>
+
+        <ol id="podium-list" class="podium-list"></ol>
+      </section>
+
+      <h2 class="section-title list-title">Tous les Kitsune</h2>
+
       <!-- Rempli en JS à partir du <template> ci-dessous -->
       <ul id="kitsune-list" class="kitsune-list"></ul>
     </main>
+
+    <!-- Modèle d'une marche du podium -->
+    <template id="podium-place-template">
+      <li class="podium-place">
+        <a class="podium-name"></a>
+        <p class="podium-value"></p>
+        <p class="podium-step"><span class="podium-medal" aria-hidden="true"></span></p>
+      </li>
+    </template>
 
     <!-- Modèle d'une carte : cloné en JS pour chaque Kitsune -->
     <template id="kitsune-card-template">
       <li class="kitsune-card">
         <a class="kitsune-card-link">
-          <h2 class="kitsune-card-name"></h2>
+          <h3 class="kitsune-card-name"></h3>
           <p class="kitsune-card-status"></p>
           <p class="kitsune-card-badge" hidden>Boosté</p>
         </a>

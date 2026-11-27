@@ -1,12 +1,17 @@
 import { getKitsunes } from '../services/kitsuneStore.js';
 import { tempsRestant } from '../utils/duree.js';
+import { initialiserPodium } from '../components/podium.js';
 
 // Afficher la liste des Kitsune dans la page
 const liste = document.querySelector('#kitsune-list');
 const template = document.querySelector('#kitsune-card-template');
+const kitsunes = getKitsunes();
 
-// Récupère la liste des Kitsune et crée une carte pour chacun d'eux
-getKitsunes().forEach((kitsune) => {
+// Bonus : podium des 3 meilleurs Kitsune
+initialiserPodium(kitsunes);
+
+// Crée une carte pour chaque Kitsune
+kitsunes.forEach((kitsune) => {
   liste.appendChild(creerCarte(kitsune));
 });
 
