@@ -28,6 +28,11 @@ Stack : HTML, JavaScript, [Tailwind CSS v4](https://tailwindcss.com/), servi ave
 - Les pages HTML sont à la racine du projet.
 - Les scripts propres à chaque écran sont dans `src/scripts/` (un fichier par page), séparés des données (`src/data/`), de l'accès aux données (`src/services/`) et des styles (`src/styles/`).
 
+## Bonus
+
+Les fonctionnalités bonus sont développées dans la branche, **[`bonus`](https://github.com/Gweju35/ensim-web-front-tp-note/tree/bonus)**.
+- **Podium sur l'écran Liste** : les 3 meilleurs Kitsune, classés par défaut sur les victoires, avec une liste déroulante pour changer de critère (PV, force, vitesse).
+
 ## Difficultés rencontrées / questions
 
 - **Flash de page non stylée en développement** : le CSS était importé depuis le JS. En mode `npm run dev`, Vite l'injecte alors via JavaScript, après l'affichage du HTML → la page apparaissait une fraction de seconde sans style. Solution : charger la feuille de style dans le `<head>`.
