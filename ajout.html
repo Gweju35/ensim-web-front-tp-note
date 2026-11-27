@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kitsunes Battle : créer un nouveau Kitsune." />
+    <meta name="theme-color" content="#191634" />
+    <title>Ajouter un Kitsune | Kitsunes Battle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a class="navbar-logo" href="index.html">Kitsunes Battle</a>
+        <ul class="navbar-links">
+          <li><a class="navbar-link" href="index.html">Liste</a></li>
+          <li><a class="navbar-link" href="ajout.html" aria-current="page">Ajouter</a></li>
+          <li><a class="navbar-link" href="bataille.html">Bataille</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">Nouveau Kitsune</h1>
+
+      <form id="kitsune-form" class="kitsune-form">
+        <fieldset class="form-group">
+          <legend class="form-legend">Identité</legend>
+
+          <div class="form-field">
+            <label class="form-label" for="nom">Nom <span aria-hidden="true">*</span></label>
+            <input class="form-input" id="nom" name="nom" type="text" required maxlength="30"
+              autocomplete="off" placeholder="Ex : Kitsune Lorem" aria-describedby="nom-erreur" />
+            <p id="nom-erreur" class="form-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="description">Description <span aria-hidden="true">*</span></label>
+            <textarea class="form-input" id="description" name="description" rows="3" required maxlength="200"
+              placeholder="Ex : Kitsune Lorem Ipsum dolor sit amet..."></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-legend">Caractéristiques</legend>
+
+          <div class="form-stats">
+            <div class="form-field">
+              <label class="form-label" for="pv">Points de vie <span aria-hidden="true">*</span></label>
+              <input class="form-input" id="pv" name="pv" type="number" required min="1" max="500" placeholder="1 à 500" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="force">Force <span aria-hidden="true">*</span></label>
+              <input class="form-input" id="force" name="force" type="number" required min="1" max="100" placeholder="1 à 100" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="vitesse">Vitesse <span aria-hidden="true">*</span></label>
+              <input class="form-input" id="vitesse" name="vitesse" type="number" required min="1" max="100" placeholder="1 à 100" />
+            </div>
+          </div>
+        </fieldset>
+
+        <p class="form-hint"><span aria-hidden="true">*</span> Champs obligatoires</p>
+
+        <div class="form-actions">
+          <button class="button button-secondary" type="reset">Réinitialiser</button>
+          <button class="button button-primary" type="submit">Créer le Kitsune</button>
+        </div>
+      </form>
+    </main>
+
+    <script type="module" src="/src/scripts/ajout.js"></script>
+  </body>
+</html>

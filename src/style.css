@@ -5,6 +5,7 @@
 @import "./styles/navbar.css";
 @import "./styles/liste.css";
 @import "./styles/details.css";
+@import "./styles/ajout.css";
 
 /* Variables de thème */
 @theme {

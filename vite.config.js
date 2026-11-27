@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         liste: 'index.html',
         details: 'details.html',
+        ajout: 'ajout.html',
       },
     },
   },

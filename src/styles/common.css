@@ -14,6 +14,10 @@
   @apply bg-pf-green text-pf-darkblue hover:bg-pf-yellow disabled:hover:bg-pf-green;
 }
 
+.button-secondary {
+  @apply border-2 border-pf-deep-blue2 bg-transparent text-pf-white hover:border-pf-green;
+}
+
 /* ----- Liens ----- */
 .link {
   @apply text-pf-green underline-offset-4 hover:underline;
