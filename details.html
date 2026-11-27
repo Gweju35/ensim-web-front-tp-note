@@ -17,7 +17,8 @@
       <nav class="navbar" aria-label="Navigation principale">
         <a class="navbar-logo" href="index.html">Kitsunes Battle</a>
         <ul class="navbar-links">
-          <li><a class="navbar-link" href="index.html">Liste</a></li>
+          <!-- aria-current="true" (et non "page") : on est DANS la section Liste, sur une sous-page -->
+          <li><a class="navbar-link" href="index.html" aria-current="true">Liste</a></li>
           <li><a class="navbar-link" href="ajout.html">Ajouter</a></li>
           <li><a class="navbar-link" href="bataille.html">Bataille</a></li>
         </ul>
@@ -25,6 +26,13 @@
     </header>
 
     <main class="page">
+      <p class="back-link-wrapper">
+        <a class="back-link" href="index.html">
+          <span class="back-link-arrow" aria-hidden="true">←</span>
+          Retour à la liste
+        </a>
+      </p>
+
       <article class="kitsune-details">
         <header class="kitsune-details-header">
           <h1 id="kitsune-nom" class="page-title"></h1>
@@ -59,6 +67,9 @@
           </div>
         </dl>
 
+        <!-- Affiché uniquement pendant un repos temporaire (après une défaite) -->
+        <p id="repos-chrono" class="repos-chrono" hidden></p>
+
         <section class="boost-panel" aria-labelledby="boost-titre">
           <h2 id="boost-titre" class="section-title">Tenter un boost</h2>
           <p>
@@ -68,10 +79,6 @@
           <button id="boost-button" class="button button-primary" type="button">Booster</button>
           <p id="boost-message" class="status-message" role="status"></p>
         </section>
-
-        <footer class="kitsune-details-footer">
-          <a class="link" href="index.html">← Retour à la liste</a>
-        </footer>
       </article>
     </main>
 

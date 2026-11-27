@@ -1,5 +1,23 @@
 /* Écran 'Détails Kitsune' */
 
+/* ----- Bouton de retour à la liste ----- */
+.back-link-wrapper {
+  @apply mx-auto mb-6 max-w-2xl text-left;
+}
+
+.back-link {
+  @apply inline-flex items-center gap-2 rounded-lg border-2 border-pf-deep-blue2 px-4 py-2 font-heading font-semibold;
+  @apply transition-colors duration-300 ease-in-out hover:border-pf-green hover:text-pf-green;
+}
+
+.back-link-arrow {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.back-link:hover .back-link-arrow {
+  @apply -translate-x-1;
+}
+
 .kitsune-details {
   @apply mx-auto flex max-w-2xl flex-col gap-8 rounded-2xl bg-pf-deep-blue1 p-6 text-left sm:p-10;
 }
@@ -29,11 +47,12 @@
   @apply font-heading text-2xl font-bold text-pf-white;
 }
 
+/* ----- Chrono de repos ----- */
+.repos-chrono {
+  @apply rounded-xl bg-white/5 p-3 text-center font-heading tabular-nums;
+}
+
 /* ----- Boost ----- */
 .boost-panel {
   @apply flex flex-col items-center gap-3 text-center;
-}
-
-.kitsune-details-footer {
-  @apply text-center;
 }

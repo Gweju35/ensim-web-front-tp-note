@@ -48,7 +48,7 @@ export const KITSUNES = [
     pv: 95,
     force: 18,
     vitesse: 75,
-    enRepos: true,
+    enRepos: false,
     victoires: 2,
     boost: false,
   },

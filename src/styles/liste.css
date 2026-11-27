@@ -20,7 +20,7 @@
 
 /* ----- Statut (enRepos) ----- */
 .kitsune-card-status {
-  @apply rounded-full px-3 py-1 text-sm font-semibold;
+  @apply rounded-full px-3 py-1 text-sm font-semibold tabular-nums;
 }
 
 .kitsune-card-status.is-available {
@@ -34,7 +34,6 @@
 /* ----- Kitsune boosté ----- */
 .kitsune-card.is-boosted {
   @apply border-pf-yellow;
-  box-shadow: 0 0 20px color-mix(in srgb, var(--color-pf-yellow) 40%, transparent);
 }
 
 .kitsune-card-badge {

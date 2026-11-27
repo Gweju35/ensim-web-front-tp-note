@@ -25,3 +25,8 @@
 .navbar-link[aria-current="page"] {
   @apply bg-pf-green text-pf-darkblue hover:bg-pf-green hover:text-pf-darkblue;
 }
+
+/* Section courante, sur une sous-page (ex : "Liste" quand on est sur les détails d'un Kitsune) */
+.navbar-link[aria-current="true"] {
+  @apply text-pf-green ring-2 ring-inset ring-pf-green hover:bg-pf-green/15 hover:text-pf-green;
+}

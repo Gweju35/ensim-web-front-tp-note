@@ -1,4 +1,5 @@
 import { findKitsune, updateKitsune } from '../services/kitsuneStore.js';
+import { tempsRestant } from '../utils/duree.js';
 
 const CHANCE_BOOST = 0.25; // 25 % de chance de réussir un boost
 const TENTATIVES_MAX = 3;  // le bouton se désactive après 3 échecs d'affilée
@@ -14,6 +15,32 @@ if (!kitsune) {
 } else {
   afficherKitsune(kitsune);
   initialiserBoost(kitsune);
+  initialiserChronoRepos(kitsune);
+}
+
+// Fonction qui affiche le temps restant avant la fin du repos (mis à jour chaque seconde)
+function initialiserChronoRepos(kitsune) {
+  if (!kitsune.enRepos || !kitsune.finRepos) {
+    return; // pas en repos, ou repos sans durée (données de départ)
+  }
+
+  const chrono = document.querySelector('#repos-chrono');
+  chrono.hidden = false;
+
+  const mettreAJour = () => {
+    if (kitsune.finRepos <= Date.now()) {
+      // Repos terminé : findKitsune() relit le stockage, qui remet enRepos à false
+      clearInterval(intervalle);
+      chrono.hidden = true;
+      Object.assign(kitsune, findKitsune(kitsune.nom));
+      afficherKitsune(kitsune);
+    } else {
+      chrono.textContent = `⏳ De retour au combat dans ${tempsRestant(kitsune.finRepos)}`;
+    }
+  };
+
+  const intervalle = setInterval(mettreAJour, 1000);
+  mettreAJour();
 }
 
 // Fonction qui met à jour l'affichage des détails d'un Kitsune
