@@ -1,0 +1,27 @@
+/* Barre de navigation, partagée par toutes les pages */
+
+.site-header {
+  @apply sticky top-0 z-50 border-b border-pf-deep-blue2 bg-pf-darkblue/90 backdrop-blur;
+}
+
+.navbar {
+  @apply container flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-4;
+}
+
+.navbar-logo {
+  @apply font-display text-lg text-pf-green sm:text-xl;
+}
+
+.navbar-links {
+  @apply flex gap-2 sm:gap-4;
+}
+
+.navbar-link {
+  @apply rounded-lg px-3 py-1 font-heading font-semibold transition-colors duration-300 ease-in-out;
+  @apply hover:bg-pf-deep-blue2 hover:text-pf-white;
+}
+
+/* Lien de la page courante */
+.navbar-link[aria-current="page"] {
+  @apply bg-pf-green text-pf-darkblue hover:bg-pf-green hover:text-pf-darkblue;
+}
