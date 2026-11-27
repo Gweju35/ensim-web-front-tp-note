@@ -46,7 +46,3 @@
 .page-title {
   @apply font-display text-4xl text-pj-orange;
 }
-
-.page-subtitle {
-  @apply mt-4 font-heading text-pj-gold;
-}

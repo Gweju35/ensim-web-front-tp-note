@@ -41,11 +41,6 @@
   @apply min-h-5 text-sm text-red-400;
 }
 
-/* ----- Liens ----- */
-.link {
-  @apply text-pj-orange underline-offset-4 hover:underline;
-}
-
 /* ----- Message d'état ----- */
 .status-message {
   @apply min-h-6 font-heading text-pj-gold;
