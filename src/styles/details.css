@@ -1,0 +1,39 @@
+/* Écran 'Détails Kitsune' */
+
+.kitsune-details {
+  @apply mx-auto flex max-w-2xl flex-col gap-8 rounded-2xl bg-pf-deep-blue1 p-6 text-left sm:p-10;
+}
+
+.kitsune-details-header {
+  @apply flex flex-col gap-3 text-center;
+}
+
+.kitsune-description {
+  @apply italic;
+}
+
+/* ----- Attributs ----- */
+.kitsune-stats {
+  @apply grid grid-cols-2 gap-4 sm:grid-cols-3;
+}
+
+.stat {
+  @apply rounded-xl bg-pf-deep-blue2 p-4 text-center;
+}
+
+.stat-label {
+  @apply text-sm uppercase tracking-wide;
+}
+
+.stat-value {
+  @apply font-heading text-2xl font-bold text-pf-white;
+}
+
+/* ----- Boost ----- */
+.boost-panel {
+  @apply flex flex-col items-center gap-3 text-center;
+}
+
+.kitsune-details-footer {
+  @apply text-center;
+}

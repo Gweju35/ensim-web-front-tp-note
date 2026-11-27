@@ -1,0 +1,25 @@
+/* Styles partagés par toutes les pages (titres, boutons, liens, messages) */
+
+.section-title {
+  @apply font-heading text-xl font-semibold text-pf-white;
+}
+
+/* ----- Boutons ----- */
+.button {
+  @apply inline-block rounded-lg px-5 py-2 font-heading font-semibold transition-all duration-300 ease-in-out cursor-pointer;
+  @apply disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+.button-primary {
+  @apply bg-pf-green text-pf-darkblue hover:bg-pf-yellow disabled:hover:bg-pf-green;
+}
+
+/* ----- Liens ----- */
+.link {
+  @apply text-pf-green underline-offset-4 hover:underline;
+}
+
+/* ----- Message d'état ----- */
+.status-message {
+  @apply min-h-6 font-heading text-pf-yellow;
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kitsunes Battle : fiche détaillée d'un Kitsune." />
+    <meta name="theme-color" content="#191634" />
+    <title>Détails Kitsune | Kitsunes Battle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="page">
+      <article class="kitsune-details">
+        <header class="kitsune-details-header">
+          <h1 id="kitsune-nom" class="page-title"></h1>
+          <p id="kitsune-description" class="kitsune-description"></p>
+        </header>
+
+        <!-- Attributs : chaque <dd> est rempli en JS d'après son data-attribut -->
+        <dl class="kitsune-stats">
+          <div class="stat">
+            <dt class="stat-label">Points de vie</dt>
+            <dd class="stat-value" data-attribut="pv"></dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-label">Force</dt>
+            <dd class="stat-value" data-attribut="force"></dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-label">Vitesse</dt>
+            <dd class="stat-value" data-attribut="vitesse"></dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-label">Victoires</dt>
+            <dd class="stat-value" data-attribut="victoires"></dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-label">En repos</dt>
+            <dd class="stat-value" data-attribut="enRepos"></dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-label">Boost</dt>
+            <dd class="stat-value" data-attribut="boost"></dd>
+          </div>
+        </dl>
+
+        <section class="boost-panel" aria-labelledby="boost-titre">
+          <h2 id="boost-titre" class="section-title">Tenter un boost</h2>
+          <p>
+            Chaque tentative a <strong>25% de chance</strong> de booster le Kitsune
+            (ses PV seront doublés lors de son prochain combat). Trois essais maximum.
+          </p>
+          <button id="boost-button" class="button button-primary" type="button">Booster</button>
+          <p id="boost-message" class="status-message" role="status"></p>
+        </section>
+
+        <footer class="kitsune-details-footer">
+          <a class="link" href="index.html">← Retour à la liste</a>
+        </footer>
+      </article>
+    </main>
+
+    <script type="module" src="/src/scripts/details.js"></script>
+  </body>
+</html>

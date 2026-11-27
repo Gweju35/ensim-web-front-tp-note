@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Découpes des styles */
+@import "./styles/common.css";
+@import "./styles/details.css";
+
+/* Variables de thème */
 @theme {
   /* Polices */
   --font-body: "Open Sans", sans-serif; /* Corps de texte */
@@ -15,18 +20,20 @@
   --color-pf-white: #FFFFFF;
 }
 
+/* Utilitaires */
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
 }
 
+/* Styles globaux */
 @layer base {
   body {
     @apply min-h-screen bg-pf-darkblue font-body overflow-x-hidden text-[#dddddd] leading-relaxed;
   }
 }
 
-/* ----- Mise en page générale ----- */
+/* Mise en page générale */
 .page {
   @apply container py-16 text-center;
 }
