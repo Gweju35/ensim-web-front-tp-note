@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+@theme {
+  /* Polices */
+  --font-body: "Open Sans", sans-serif; /* Corps de texte */
+  --font-heading: "Poppins", sans-serif; /* Titres de cartes, menu, sous-titres */
+  --font-display: "Bungee", sans-serif; /* Textes courts et gros (logo, grands titres) */
+
+  /* Couleurs */
+  --color-pf-green: #08D565;
+  --color-pf-darkblue: #191634;
+  --color-pf-deep-blue1: #201D3A;
+  --color-pf-deep-blue2: #2D2A4A;
+  --color-pf-yellow: #FFC857;
+  --color-pf-white: #FFFFFF;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-pf-darkblue font-body overflow-x-hidden text-[#dddddd] leading-relaxed;
+  }
+}
+
+/* ----- Mise en page générale ----- */
+.page {
+  @apply container py-16 text-center;
+}
+
+.page-title {
+  @apply font-display text-4xl text-pf-green;
+}
+
+.page-subtitle {
+  @apply mt-4 font-heading text-pf-yellow;
+}
