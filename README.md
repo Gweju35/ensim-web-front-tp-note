@@ -14,7 +14,7 @@ Stack : HTML, JavaScript, [Tailwind CSS v4](https://tailwindcss.com/), servi ave
 
 - La liste initiale est dans `src/data/kitsunes.js` (6 Kitsune).
 - Le **`nom` sert d'identifiant unique** : le sujet interdit deux Kitsune avec le même nom, donc pas besoin d'un champ `id` en plus.
-- Les jeux de données couvrent les cas à tester : un Kitsune déjà `boost`, un autre `enRepos`, et deux Kitsune de même `vitesse` (égalité tirée au sort en bataille).
+- Les jeux de données couvrent les cas à tester : un Kitsune déjà `boost`, et deux Kitsune de même `vitesse` (égalité tirée au sort en bataille).
 
 ### Plusieurs pages + `localStorage`
 
