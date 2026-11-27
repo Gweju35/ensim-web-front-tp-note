@@ -1,4 +1,3 @@
-import '../style.css';
 import { findKitsune, updateKitsune } from '../services/kitsuneStore.js';
 
 const CHANCE_BOOST = 0.25; // 25 % de chance de réussir un boost

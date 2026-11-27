@@ -1,4 +1,3 @@
-import '../style.css';
 import { getKitsunes } from '../services/kitsuneStore.js';
 
 // Afficher la liste des Kitsune dans la page
