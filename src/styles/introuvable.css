@@ -1,0 +1,13 @@
+/* Écran 'Kitsune introuvable' */
+
+.not-found {
+  @apply flex flex-col items-center gap-6;
+}
+
+.not-found-icon {
+  @apply text-6xl;
+}
+
+.not-found-message {
+  @apply font-heading text-lg;
+}

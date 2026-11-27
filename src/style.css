@@ -6,6 +6,7 @@
 @import "./styles/liste.css";
 @import "./styles/details.css";
 @import "./styles/ajout.css";
+@import "./styles/introuvable.css";
 
 /* Variables de thème */
 @theme {

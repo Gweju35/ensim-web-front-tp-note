@@ -9,6 +9,7 @@ export default defineConfig({
         liste: 'index.html',
         details: 'details.html',
         ajout: 'ajout.html',
+        introuvable: 'introuvable.html',
       },
     },
   },
