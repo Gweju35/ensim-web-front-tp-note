@@ -18,6 +18,29 @@
   @apply border-2 border-pf-deep-blue2 bg-transparent text-pf-white hover:border-pf-green;
 }
 
+/* ----- Champs de formulaire (écrans Ajout et Bataille) ----- */
+.form-field {
+  @apply flex flex-col gap-1;
+}
+
+.form-label {
+  @apply font-heading font-semibold;
+}
+
+.form-input {
+  @apply w-full rounded-lg border-2 border-pf-deep-blue2 bg-pf-darkblue px-3 py-2 text-pf-white;
+  @apply placeholder:text-[#777777] focus:border-pf-green focus:outline-none disabled:opacity-40;
+}
+
+/* ----- Champ refusé ----- */
+.form-input[aria-invalid="true"] {
+  @apply border-red-400;
+}
+
+.form-error {
+  @apply min-h-5 text-sm text-red-400;
+}
+
 /* ----- Liens ----- */
 .link {
   @apply text-pf-green underline-offset-4 hover:underline;

@@ -31,6 +31,32 @@ export function getKitsunes() {
     save(STORAGE_KEY, KITSUNES);
     return get(STORAGE_KEY);
   }
+  return terminerReposExpires(kitsunes);
+}
+
+// Fonction qui met un Kitsune au repos pendant une durée (en ms).
+// On enregistre l'heure de fin (finRepos) pour que le repos se termine même si l'utilisateur change de page
+export function mettreAuRepos(kitsune, duree) {
+  kitsune.enRepos = true;
+  kitsune.finRepos = Date.now() + duree;
+  updateKitsune(kitsune);
+}
+
+// Fonction qui sort du repos les Kitsune dont l'heure de fin est dépassée
+function terminerReposExpires(kitsunes) {
+  let modifie = false;
+
+  kitsunes.forEach((kitsune) => {
+    if (kitsune.enRepos && kitsune.finRepos && kitsune.finRepos <= Date.now()) {
+      kitsune.enRepos = false;
+      delete kitsune.finRepos;
+      modifie = true;
+    }
+  });
+
+  if (modifie) {
+    save(STORAGE_KEY, kitsunes);
+  }
   return kitsunes;
 }
 

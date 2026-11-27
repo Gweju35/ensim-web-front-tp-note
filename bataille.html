@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kitsunes Battle : faites combattre deux Kitsune." />
+    <meta name="theme-color" content="#191634" />
+    <title>Bataille | Kitsunes Battle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a class="navbar-logo" href="index.html">Kitsunes Battle</a>
+        <ul class="navbar-links">
+          <li><a class="navbar-link" href="index.html">Liste</a></li>
+          <li><a class="navbar-link" href="ajout.html">Ajouter</a></li>
+          <li><a class="navbar-link" href="bataille.html" aria-current="page">Bataille</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">Bataille</h1>
+      <p class="battle-intro">Choisis deux Kitsune disponibles (les Kitsune en repos ne peuvent pas combattre).</p>
+
+      <form id="battle-form" class="battle-form">
+        <div class="battle-fighters">
+          <div class="form-field">
+            <label class="form-label" for="combattant-1">Combattant 1</label>
+            <select class="form-input" id="combattant-1" name="combattant1" required></select>
+          </div>
+
+          <p class="battle-versus" aria-hidden="true">VS</p>
+
+          <div class="form-field">
+            <label class="form-label" for="combattant-2">Combattant 2</label>
+            <select class="form-input" id="combattant-2" name="combattant2" required></select>
+          </div>
+        </div>
+
+        <!-- Activé en JS uniquement quand 2 Kitsune différents sont sélectionnés -->
+        <button id="combat-button" class="button button-primary button-large" type="submit" disabled>Combat !</button>
+      </form>
+
+      <p id="battle-message" class="status-message battle-message" role="status"></p>
+
+      <!-- Résultat affiché 3 secondes après le lancement du combat -->
+      <section id="battle-result" class="battle-result" aria-labelledby="battle-result-title" hidden>
+        <h2 id="battle-result-title" class="section-title"></h2>
+        <p id="battle-result-summary"></p>
+
+        <details class="battle-log">
+          <summary class="battle-log-summary">Voir le déroulé du combat</summary>
+          <ol id="battle-log-list" class="battle-log-list"></ol>
+        </details>
+      </section>
+    </main>
+
+    <script type="module" src="/src/scripts/bataille.js"></script>
+  </body>
+</html>

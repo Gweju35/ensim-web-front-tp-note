@@ -10,6 +10,7 @@ export default defineConfig({
         details: 'details.html',
         ajout: 'ajout.html',
         introuvable: 'introuvable.html',
+        bataille: 'bataille.html',
       },
     },
   },
